@@ -1,0 +1,38 @@
+@startuml "ControlVehiculos"
+
+class Vehiculo {
+  marca: String
+  modelo: String
+  nro_ruedas: Int
+}
+
+class Automovil {
+  velocidad: Int
+  cilindrada: Int
+}
+
+class Particular {
+  nro_puestos: Int
+}
+
+class Carga {
+  peso_carga: Int
+}
+
+class Bicicleta {
+  tipo: String
+}
+
+class Motocicleta {
+  nro_radios: Int
+  cuadro: String
+  motor: String
+}
+
+Vehiculo <|-- Automovil
+Vehiculo <|-- Bicicleta
+Automovil <|-- Particular
+Automovil <|-- Carga
+Bicicleta <|-- Motocicleta
+
+@enduml
